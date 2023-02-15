@@ -1,4 +1,4 @@
 # ChatBot
 Todo:
-1. Change "Mango:" to icon
-2. Change colors
+1. Change colors
+2. ? button to show opptions of the mango 

@@ -8,11 +8,25 @@ function send(){
     resp(msg)
 }
 function resp(msg){
-    if(msg.toLocaleLowerCase() == "hi"||msg.toLocaleLowerCase() =="hello"){
+    //div to handle ig and msg from mango
+    const div = document.createElement("div")
+    div.classList.add("msg-div")
+    //element for msg
     const p = document.createElement("p")
-    p.innerHTML = "Mango: Hi how can i help you?"
+    //mango img before msg
+    const icon = document.createElement("img")
+    icon.src = "mango-64.png"
+    icon.classList.add("logo")
+    //greeting
+    if(msg.toLocaleLowerCase() == "hi"||msg.toLocaleLowerCase() =="hello"){
+    
+    p.innerHTML = "Hi how can i help you?"
     p.classList.add("twoje")
     p.classList.add("msg")
-    document.getElementById("chatArea").appendChild(p)
     }
+
+
+    div.appendChild(icon)
+    div.appendChild(p)
+    document.getElementById("chatArea").appendChild(div)
 }
