@@ -35,8 +35,8 @@ function help(){
 
 }
 function resp(msg){
-    countries(msg)
     greeting(msg)
+    countries(msg)
 }
 function greeting(msg){
     if(msg.toLocaleLowerCase() == "hi" || msg.toLocaleLowerCase() == "hello"){
@@ -52,7 +52,7 @@ async function countries(msg){
             res("The capital is "+jsonc[i].capital)
         }
         if(msg.toLocaleLowerCase().includes("population")&& msg.toLocaleLowerCase().includes(jsonc[i].name.toLocaleLowerCase())){
-            res("Population is around "+jsonc[i].population+" people")
+            res("Population of is around "+jsonc[i].population+" people")
         }
     }
 }
