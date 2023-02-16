@@ -1,9 +1,11 @@
 var jsonc = []
-async function getData(){
+//Downloading data about countries
+async function getCountries(){
     const datac = await fetch("https://restcountries.com/v2/all")
     jsonc = await datac.json()
 }
-getData()
+getCountries()
+//creating message
 function send(){
     const msg = document.getElementById("msg").value
     const p = document.createElement("p")
@@ -12,6 +14,7 @@ function send(){
     p.classList.add("msg")
     document.getElementById("chatArea").appendChild(p)
     resp(msg)
+    document.getElementById("msg").value = ""
 }
 function help(){
     //div to handle ig and msg from mango
