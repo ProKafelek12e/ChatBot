@@ -52,7 +52,7 @@ async function countries(msg){
     for(var i=0;i<=jsonc.length-1;i++){
         //capitals
         if(msg.toLocaleLowerCase().includes("capital") && msg.toLocaleLowerCase().includes(jsonc[i].name.toLocaleLowerCase())){
-            res("The capital of"+jsonc[i].name+" is "+jsonc[i].capital)
+            res("The capital of "+jsonc[i].name+" is "+jsonc[i].capital)
         }
         if(msg.toLocaleLowerCase().includes("population")&& msg.toLocaleLowerCase().includes(jsonc[i].name.toLocaleLowerCase())){
             res("Population of "+jsonc[i].name+" is around "+jsonc[i].population+" people")

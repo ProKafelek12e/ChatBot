@@ -84,7 +84,7 @@ body{
     flex-wrap: wrap;
 }
 .moje{
-    align-self: last baseline;
+    align-self: end;
     text-align: right;
     background-color: #ff342c;
     color: #efffff;
