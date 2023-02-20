@@ -107,18 +107,75 @@ function ticTacToe(){
     p.appendChild(board)
 }
 var chosen = 0 
-var chosed = [{square:1,chosed:0},{square:2,chosed:0},{square:3,chosed:0},{square:4,chosed:0},{square:5,chosed:0},{square:6,chosed:0},{square:7,chosed:0},{square:8,chosed:0},{square:9,chosed:0},]
+var chosed = [
+    {square:1,chosed:0,mark:""},
+    {square:2,chosed:0,mark:""},
+    {square:3,chosed:0,mark:""},
+    {square:4,chosed:0,mark:""},
+    {square:5,chosed:0,mark:""},
+    {square:6,chosed:0,mark:""},
+    {square:7,chosed:0,mark:""},
+    {square:8,chosed:0,mark:""},
+    {square:9,chosed:0,mark:""}]
 function tttCC(i){
     if(chosen==0 && chosed[i].chosed==0){
         document.getElementById("sq"+i).innerHTML = "X"
         chosen = 1
         chosed[i].chosed = 1
+        chosed[i].mark = "x"
         console.log("c: x")
+
     }
     else if(chosen==1&& chosed[i].chosed==0){
         document.getElementById("sq"+i).innerHTML = "O"
         chosen = 0
         chosed[i].chosed = 1
+        chosed[i].mark = "o"
         console.log("c: O")
+    }
+    tttw()
+    console.log(chosed)
+}
+function tttw(){
+    var end = 0
+    //horizontal wins
+    if(chosed[0].chosed==1 && (chosed[0].chosed==chosed[1].chosed && chosed[1].chosed==chosed[2].chosed)&&(chosed[0].mark == chosed[1].mark && chosed[1].mark == chosed[2].mark)){
+        console.log("end h1")
+        end =1
+    }
+    if(chosed[3].chosed==1 && (chosed[3].chosed==chosed[4].chosed && chosed[4].chosed==chosed[5].chosed)&&(chosed[3].mark==chosed[4].mark && chosed[4].mark==chosed[5].mark)){
+        console.log("end h2")
+        end =1
+    }
+    if(chosed[6].chosed==1 && (chosed[6].chosed==chosed[7].chosed && chosed[7].chosed==chosed[8].chosed)&&(chosed[6].mark==chosed[7].mark && chosed[7].mark==chosed[8].mark)){
+        console.log("end h3")
+        end =1
+    }
+    //vertical wins
+    if(chosed[0].chosed==1 && (chosed[0].chosed==chosed[3].chosed && chosed[3].chosed==chosed[6].chosed)&&(chosed[0].mark == chosed[3].mark && chosed[3].mark == chosed[6].mark)){
+        console.log("end v1")
+        end =1
+    }
+    if(chosed[1].chosed==1 && (chosed[1].chosed==chosed[4].chosed && chosed[4].chosed==chosed[7].chosed)&&(chosed[1].mark==chosed[4].mark && chosed[4].mark==chosed[7].mark)){
+        console.log("end v2")
+        end =1
+    }
+    if(chosed[2].chosed==1 && (chosed[2].chosed==chosed[5].chosed && chosed[5].chosed==chosed[8].chosed)&&(chosed[2].mark==chosed[5].mark && chosed[5].mark==chosed[8].mark)){
+        console.log("end v3")
+        end =1
+    }
+    //diagonal wins
+    if(chosed[0].chosed==1 && (chosed[0].chosed==chosed[4].chosed && chosed[4].chosed==chosed[8].chosed)&&(chosed[0].mark == chosed[4].mark && chosed[4].mark == chosed[8].mark)){
+        console.log("end dLuRd")
+        end =1
+    }
+    if(chosed[2].chosed==1 && (chosed[2].chosed==chosed[4].chosed && chosed[4].chosed==chosed[6].chosed)&&(chosed[2].mark==chosed[4].mark && chosed[4].mark==chosed[6].mark)){
+        console.log("end dRuLd")
+        end =1
+    }   
+    if(end==1){
+        for(var i=0;i<=8;i++){
+            chosed[i].chosed =1
+        }
     }
 }
