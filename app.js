@@ -175,7 +175,7 @@ function tttw(){
     }   
     if(end==1){
         for(var i=0;i<=8;i++){
-            chosed[i].chosed =1
+            chosed[i].chosed =2
         }
     }
 }
