@@ -115,3 +115,18 @@ body{
     border: #202124 solid 4px;
     color: #e4e6eb;
 }
+.board{
+    display: grid;
+    background-color: #e4e6eb;
+    gap: 5px;
+    grid-template-columns: 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px;
+}
+.board h1{
+    background-color: #ff342c;
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    font-size: 150%;
+    text-align: center;
+}

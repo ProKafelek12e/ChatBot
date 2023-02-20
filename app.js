@@ -78,3 +78,47 @@ function res(res){
     document.getElementById("chatArea").appendChild(div)
     
 }
+function ticTacToe(){
+    //container for icon and message
+    const div = document.createElement("div")
+    div.classList.add("msg-div")
+    //mango icon
+    const icon = document.createElement("img")
+    icon.src = "mango-64.png"
+    icon.classList.add("logo")
+    //message
+    const p = document.createElement("p")
+    p.classList.add("twoje")
+    p.classList.add("msg")
+
+    div.appendChild(icon)
+    div.appendChild(p)
+    document.getElementById("chatArea").appendChild(div)
+    //ttt board
+    const board = document.createElement("div")
+    board.classList.add("board")
+
+    for(var i =0;i<9;i++){
+        const square = document.createElement("h1")
+        square.setAttribute("id","sq"+i)
+        square.setAttribute("onclick",`tttCC(${i})`)
+        board.appendChild(square)
+    }
+    p.appendChild(board)
+}
+var chosen = 0 
+var chosed = [{square:1,chosed:0},{square:2,chosed:0},{square:3,chosed:0},{square:4,chosed:0},{square:5,chosed:0},{square:6,chosed:0},{square:7,chosed:0},{square:8,chosed:0},{square:9,chosed:0},]
+function tttCC(i){
+    if(chosen==0 && chosed[i].chosed==0){
+        document.getElementById("sq"+i).innerHTML = "X"
+        chosen = 1
+        chosed[i].chosed = 1
+        console.log("c: x")
+    }
+    else if(chosen==1&& chosed[i].chosed==0){
+        document.getElementById("sq"+i).innerHTML = "O"
+        chosen = 0
+        chosed[i].chosed = 1
+        console.log("c: O")
+    }
+}
