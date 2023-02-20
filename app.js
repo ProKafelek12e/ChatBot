@@ -142,36 +142,84 @@ function tttw(){
     if(chosed[0].chosed==1 && (chosed[0].chosed==chosed[1].chosed && chosed[1].chosed==chosed[2].chosed)&&(chosed[0].mark == chosed[1].mark && chosed[1].mark == chosed[2].mark)){
         console.log("end h1")
         end =1
+        if(chosed[0].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[0].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     if(chosed[3].chosed==1 && (chosed[3].chosed==chosed[4].chosed && chosed[4].chosed==chosed[5].chosed)&&(chosed[3].mark==chosed[4].mark && chosed[4].mark==chosed[5].mark)){
         console.log("end h2")
         end =1
+        if(chosed[3].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[3].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     if(chosed[6].chosed==1 && (chosed[6].chosed==chosed[7].chosed && chosed[7].chosed==chosed[8].chosed)&&(chosed[6].mark==chosed[7].mark && chosed[7].mark==chosed[8].mark)){
         console.log("end h3")
         end =1
+        if(chosed[6].mark=="o"){
+            res("Wow I won")
+        }
+        if(chosed[6].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     //vertical wins
     if(chosed[0].chosed==1 && (chosed[0].chosed==chosed[3].chosed && chosed[3].chosed==chosed[6].chosed)&&(chosed[0].mark == chosed[3].mark && chosed[3].mark == chosed[6].mark)){
         console.log("end v1")
         end =1
+        if(chosed[0].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[0].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     if(chosed[1].chosed==1 && (chosed[1].chosed==chosed[4].chosed && chosed[4].chosed==chosed[7].chosed)&&(chosed[1].mark==chosed[4].mark && chosed[4].mark==chosed[7].mark)){
         console.log("end v2")
         end =1
+        if(chosed[1].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[1].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     if(chosed[2].chosed==1 && (chosed[2].chosed==chosed[5].chosed && chosed[5].chosed==chosed[8].chosed)&&(chosed[2].mark==chosed[5].mark && chosed[5].mark==chosed[8].mark)){
         console.log("end v3")
         end =1
+        if(chosed[2].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[2].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     //diagonal wins
     if(chosed[0].chosed==1 && (chosed[0].chosed==chosed[4].chosed && chosed[4].chosed==chosed[8].chosed)&&(chosed[0].mark == chosed[4].mark && chosed[4].mark == chosed[8].mark)){
         console.log("end dLuRd")
         end =1
+        if(chosed[0].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[0].mark=="x"){
+            res("Congratulations you won")
+        }
     }
     if(chosed[2].chosed==1 && (chosed[2].chosed==chosed[4].chosed && chosed[4].chosed==chosed[6].chosed)&&(chosed[2].mark==chosed[4].mark && chosed[4].mark==chosed[6].mark)){
         console.log("end dRuLd")
         end =1
+        if(chosed[2].mark=="o"){
+            res("Wow i won")
+        }
+        if(chosed[2].mark=="x"){
+            res("Congratulations you won")
+        }
     }   
     if(end==1){
         for(var i=0;i<=8;i++){
