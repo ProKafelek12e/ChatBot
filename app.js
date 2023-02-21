@@ -28,7 +28,7 @@ function help(){
     
     //element for msg
     const p = document.createElement("p")
-    p.innerHTML = "I can do..."
+    p.innerHTML = "help"
     p.classList.add("twoje")
     p.classList.add("msg")
 
@@ -116,7 +116,8 @@ var chosed = [
     {square:6,chosed:0,mark:""},
     {square:7,chosed:0,mark:""},
     {square:8,chosed:0,mark:""},
-    {square:9,chosed:0,mark:""}]
+    {square:9,chosed:0,mark:""}
+]
 function tttCC(i){
     if(chosen==0 && chosed[i].chosed==0){
         document.getElementById("sq"+i).innerHTML = "X"
@@ -226,4 +227,17 @@ function tttw(){
             chosed[i].chosed =2
         }
     }
+}
+function tttBot(){
+   if(chosed[random()].chosed==0){
+    chosed[random()].chosed = 1
+    chosed[random()].makr = "O"
+   } 
+   else{
+    tttBot()
+   }
+}
+function random(){
+    max= 8
+    return Math.floor(Math.random() * max)
 }

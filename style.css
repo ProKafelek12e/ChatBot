@@ -31,6 +31,7 @@ body{
     flex-direction: column;
     justify-content: end;
     align-items: center;
+    background-color: #35363a;
 
 }
 #chatHead h1{
